@@ -1,10 +1,10 @@
 # Board specific SELinux policy variable definitions
 ifeq ($(call is-vendor-board-platform,QCOM),true)
 BOARD_SEPOLICY_DIRS := \
-       device/qcom/sepolicy \
-       device/qcom/sepolicy/common \
-       device/qcom/sepolicy/test \
-       device/qcom/sepolicy/$(TARGET_BOARD_PLATFORM)
+       device/qcom/common/sepolicy \
+       device/qcom/common/sepolicy/common \
+       device/qcom/common/sepolicy/test \
+       device/qcom/common/sepolicy/$(TARGET_BOARD_PLATFORM)
 
 BOARD_SEPOLICY_UNION := \
        genfs_contexts \
